@@ -1,0 +1,66 @@
+
+
+<div class="container card ">
+    <div class="row">
+        <div class="col 3">
+            <h3></h3>
+        </div>
+        <div class="col 6">
+            <form action="" [formGroup]='addProductForm' (ngSubmit)='onFormSubmit()'>
+                <h3 style="margin-left:10px">Add New Product</h3>
+                <table class="table table-hover table-responsive-md">
+                    <thead class="thead dark">               
+                          <tr>
+                            <td>Product Name</td>
+                            <td><input type="text" formControlName="productName" ></td>
+                        </tr>
+                        <tr>
+                            <td>Product Image</td>
+                            <td><input type="text" formControlName="productImage" placeholder="Enter Image Url" ></td>
+                        </tr>  
+                        <tr>
+                            <td>Product Description</td>
+                            <td><input type="text" formControlName="productDescription" ></td>
+                        </tr>
+                        <tr>
+                            <td>Product Price</td>
+                            <td><input type="number" formControlName="productPrice" min="1" ></td>
+                        </tr>
+                        <td colspan="2">
+                            <input  class="btn btn-primary"   type="submit" [disabled]="!addProductForm.valid" value="Submit"/>
+                        </td>
+                     </thead>   
+                  </table>
+            </form>
+            <p *ngIf="datasave" ngClass="success">Save Data Successfully</p>
+        </div>
+        <div class="col 3">
+            <h1></h1>
+        </div>
+
+
+        <table border="5" class="table table-hover table-responsive-md" >
+            <tr class="thead dark">
+                <th>ID</th> <th>Product Name</th> <th>product Image</th> <th>product Description</th><th>product Price</th>
+            </tr>
+            <tr *ngFor="let allProduct of allProduct|async ">
+                <td>{{allProduct.id}}</td>
+                <td style="color: blue;">{{allProduct.productName}}</td>
+                <td><img src='{{allProduct.productImage}}' style="width:120px;" alt="image"></td>
+                <td>{{allProduct.productDescription}}</td>
+                <td style="color: #B12704; ">{{allProduct.productPrice  |currency:'INR'}}</td>
+                <td ><button class="btn btn-success" (click)="loadProduct(allProduct.id)" >Edit</button></td>
+                <td><button class="btn btn-danger" (click)="productDelete(allProduct.id)">Delete</button></td>
+                <!-- <td><button (click)="productUpdateById(allProduct.id)">Update</button></td> -->
+             </tr> 
+        </table>
+       
+    <!-- ********************************* -->
+   
+        <!-- ********************************** -->
+    </div>
+
+</div>
+
+
+

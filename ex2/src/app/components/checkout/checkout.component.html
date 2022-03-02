@@ -1,0 +1,237 @@
+
+  <!-- <div class="col-md-8 order-md-1">
+    <h4 class="mb-3"></h4>
+    <form class="needs-validation" novalidate="">
+        <h4 class="mb-3">Payment</h4>
+        <div class="d-block my-3">
+            <div class="custom-control custom-radio">
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked=""
+                    required="">
+                <label class="custom-control-label" for="credit">Cash On delivery</label>
+            </div>
+        </div>
+    </form>
+</div> -->
+
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div>
+            <div class="col-md-4 order-sm-2 mb-2">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Your Cart</span>
+                    <span class="badge badge-secondary badge-pill"></span>
+                </h4>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card-table">
+                <div class="cart-product">
+                    <table class="table table-responsive">
+                        <thead text="Your Cart">
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of products; let i = index">
+                                <td style="color: blue;">{{item.product.productName}}</td>
+                                <td><img src='{{item.product.productImage}}' style="width:120px;" alt=""></td>
+                                <td>{{item.product.productDescription}}</td>
+                                <td style="color: #B12704; ">{{item.product.productPrice |currency:'INR'}}</td>
+                                <td></td>
+                            </tr>
+                           
+                            <tr>
+                                <td colspan="4"></td>
+                                <td style="color: #B12704;"><strong><span style="color: black;">Total</span>
+                                        :{{grandTotal
+                                        |currency:'INR'}}</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- <div class="col-md-8 order-md-1">
+            <h4 class="mb-3"></h4>
+            <form class="needs-validation" novalidate="">
+                <h4 class="mb-3">Payment</h4>
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                        <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked=""
+                            required="">
+                        <label class="custom-control-label" for="credit">Cash On delivery</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+         -->
+        
+         <!-- <div class="container card ">
+            <div class="row">
+                <div class="col 3">
+                    <h3></h3>
+                </div>
+                <div class="col 6">
+                    <form action="" [formGroup]='customerOrderInformation' (ngSubmit)='onFormSubmit()'>
+                        <h3 style="margin-left:10px">Delivery Address</h3>
+                        <table class="table table-hover table-responsive-md">
+                            <thead class="thead dark">               
+                                  <tr>
+                                    <td>Customer Name</td>
+                                    <td><input type="text" formControlName="CustomerName" ></td>
+                                </tr>
+                                <tr>
+                                    <td>Address</td>
+                                        <td> <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="CustomerAddress" rows="3" placeholder="Enter Address"></textarea></td>
+                                    
+                                </tr>
+                   
+                                <td colspan="2">
+                                    <input  class="btn btn-primary"   type="submit" [disabled]="!customerOrderInformation.valid" value="Submit"/>
+                                </td>
+                             </thead>   
+                          </table>
+                    </form>
+                  
+                </div>
+                <div class="col 3">
+                    <h1></h1>
+                </div> -->
+
+
+               
+                <!-- <div class="container">
+                    <div class="row">
+                      <div class="col-sm-3"></div>
+                        <div class="col-md-5">
+                                <div class="text-center mb-4">
+                                    
+                                    <h6>Delivery Addresss</h6>
+                                </div>
+                                <form [formGroup]="signUpForm">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">First Name</label>
+                                        <input type="text" formControlName="firstName" class="form-control" id="exampleInputPassword1" placeholder="Enter First Name">
+                                        <span class="text-danger" *ngIf="signUpForm.controls['firstName'].dirty && signUpForm.hasError('required','firstName')">*First Name is required</span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Last Name</label>
+                                        <input type="text" formControlName="lastName" class="form-control" id="exampleInputPassword1" placeholder="Enter lastName">
+                                        <span class="text-danger" *ngIf="signUpForm.controls['lastName'].dirty && signUpForm.hasError('required','lastName')">*Last Name is required</span>
+                                    </div>
+                                  
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1">Address</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="customerAddress" rows="3" id="exampleInputPassword1" placeholder="Enter Address"></textarea>
+                                    <span class="text-danger" *ngIf="signUpForm.controls['customerAddress'].dirty && signUpForm.hasError('required','customerAddress')">*Address  is required</span>
+                                    <button type="submit" (click)="orderDetails()" class="btn btn-primary mt-3">Place Order</button>
+                                  </div>
+                                </form>
+                        </div>
+                  
+                    </div>
+                  </div>
+                  <div class="col-md-8 order-md-1">
+                    <h4 class="mb-3"></h4>
+                    <form class="needs-validation" novalidate="">
+                        <h4 class="mb-3">Payment Mode</h4>
+                        <div class="d-block my-3">
+                            <div class="custom-control custom-radio">
+                                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked=""
+                                    required="">
+                                <label class="custom-control-label" for="credit">Cash On delivery</label>
+                            </div>
+                        </div>
+                    </form>
+                </div> -->
+                  
+                  
+<div class="container" style="margin-bottom: 25px;">
+    <div class="row">
+        <div>
+            <div class="col-md-4 order-sm-2 mb-2">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Your Cart</span>
+                    <span class="badge badge-secondary badge-pill"></span>
+                </h4>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="card-table">
+                <div class="cart-product">
+                    <table class="table table-responsive">
+                        <thead text="Your Cart">
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Image</th>
+                                <th> Product Description</th>
+                                <th>product Price</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of products; let i = index">
+                                <td style="color: blue;">{{item.product.productName}}</td>
+                                <td><img src='{{item.product.productImage}}' style="width:120px;" alt=""></td>
+                                <td>{{item.product.productDescription}}</td>
+                                <td style="color: #B12704; ">{{item.product.productPrice |currency:'INR'}}</td>
+                                
+                            </tr>
+                            <tr>
+                                <!-- <td colspan="5"></td> -->
+                                <td style="color: #B12704;"><strong><span style="color: black;">Total</span>
+                                        :{{grandTotal|currency:'INR'}}</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <form [formGroup]="orderDetailsForm"  (ngSubmit)='orderDetails()'>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">First Name</label>
+                    <input type="text" formControlName="firstName" class="form-control" id="exampleInputPassword1" placeholder="Enter First Name">
+                    <span class="text-danger" *ngIf="signUpForm.controls['firstName'].dirty && signUpForm.hasError('required','firstName')">*First Name is required</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Last Name</label>
+                    <input type="text" formControlName="lastName" class="form-control" id="exampleInputPassword1" placeholder="Enter lastName">
+                    <span class="text-danger" *ngIf="signUpForm.controls['lastName'].dirty && signUpForm.hasError('required','lastName')">*Last Name is required</span>
+                </div>
+              
+              <div class="form-group">
+                <label for="exampleInputPassword1">Address</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="customerAddress" rows="3" id="exampleInputPassword1" placeholder="Enter Address"></textarea>
+                <span class="text-danger" *ngIf="signUpForm.controls['customerAddress'].dirty && signUpForm.hasError('required','customerAddress')">*Address  is required</span>
+                <!-- <button type="submit" (click)="orderDetails()" class="btn btn-primary mt-3">Place Order</button> -->
+                <input  class="btn btn-primary"   type="submit" [disabled]="!signUpForm.valid" value="Submit"/>
+              </div>
+            </form>
+            <form class="needs-validation" novalidate="">
+                <h4 class="mb-3">Payment Mode</h4>
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                        <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked=""
+                            required="">
+                        <label class="custom-control-label" for="credit">Cash On delivery</label>
+                    </div>
+                </div>
+            </form>
+            
+          </div>
+
+    </div>
+    
+</div>
