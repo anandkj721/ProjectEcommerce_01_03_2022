@@ -30,6 +30,27 @@ namespace ecom.Controllers
             return ObjOrderDetailsDataAccessLayer.AddOrderdetail(Orderdetail);
         }
 
+        [HttpGet]
+        [Route("api/OrderDetail/Details/{userName}")]
+        public List<Orderdetail> Details(string Username)
+        {
+            return ObjOrderDetailsDataAccessLayer.GetOrderdetailData(Username);
+        }
+
+       
+        [HttpGet]
+        [Route("api/OrderDetail/Index")]
+        public IEnumerable<Orderdetail> Index()
+        {
+            return ObjOrderDetailsDataAccessLayer.GetAllOrderdetail();
+        }
+
+        //***********
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        //{
+        //    return await _context.Users.ToListAsync();
+        //}
 
         //public OrderdetailsController(dev_apidbProduct context)
         //{

@@ -1,0 +1,40 @@
+
+<div class="container">
+    <h3>User Order Details</h3>
+    <hr>
+    <table class="table table-striped table-bordered table-sm row-border hover" 
+       id="datatableexample">
+    
+         <thead>
+           <tr>    
+             <th>First Name</th>
+             <th>Last Name</th>
+             <th>product Name</th>     
+             <th>Quantity</th>     
+             <th>productImage</th>
+                     
+           </tr>
+         </thead>
+         <tbody>
+          <tr *ngFor="let abc of allProduct|async"> 
+           
+               <td>{{abc.firstName}}</td>
+               <td>{{abc.lastName}}</td>
+               <td>{{abc.productName}}</td>
+               <td>{{abc.productImage}}</td>                    
+            </tr>
+      </tbody>      
+    </table>  
+
+
+    <table border="5" class="table table-hover table-responsive-md" >
+        <tr class="thead dark">
+            <th>ID</th> <th>Product Name</th> <th>product Image</th> <th>product Description</th><th>product Price</th>
+        </tr>
+        <tr *ngFor="let allProduct of allProduct|async ">
+            <td>{{allProduct.firstName}}</td>
+            <td style="color: blue;">{{allProduct.lastName}}</td>
+
+         </tr> 
+    </table>
+</div>

@@ -22,6 +22,8 @@ import { LoginComponent } from './components/login/login.component';
 import { adminlogin } from './components/adminLogin/login.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { UsersComponent } from './components/users/users.component';
+import { UserOrdersComponent } from './components/user-orders/user-orders.component';
+import { AdminOrderUsersComponent } from './components/admin-order-users/admin-order-users.component';
 
 
 
@@ -42,7 +44,9 @@ import { UsersComponent } from './components/users/users.component';
     LoginComponent,
     adminlogin,
     AdminComponent,
-    UsersComponent
+    UsersComponent,
+    UserOrdersComponent,
+    AdminOrderUsersComponent
   
   ],
   imports: [

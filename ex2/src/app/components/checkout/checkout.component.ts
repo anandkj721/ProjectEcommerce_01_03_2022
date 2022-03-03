@@ -5,7 +5,8 @@ import { FormBuilder,FormGroup,Validators,FormGroupDirective,Form, FormControl,N
 import { ActivatedRoute, Router } from '@angular/router';
 import { CartService } from 'src/app/services/shared/cart.service';
 import { filter } from 'rxjs';
-import { customerOrderInformationModel } from 'src/app/customerOrderInformationModel';import { OrderDetailsService } from 'src/app/services/order-details.service';
+import { customerOrderInformationModel } from 'src/app/customerOrderInformationModel';
+import { OrderDetailsService } from 'src/app/services/order-details.service';
 import { UserService } from 'src/app/services/user.service';
 ;
 
@@ -92,8 +93,8 @@ export class CheckoutComponent implements OnInit {
     this.orderDetailsService.orderDetails(this.customerOrderInformationModelObj)
     .subscribe(res=>{
       this.orderDetailsService.orderDetails(this.customerOrderInformationModelObj)
-      this.resetsignUpForm();
-      this.router.navigate(['/productpages'])
+      this.resetOrderDetailsForm();
+      this.router.navigate(['/productPage'])
     })
 
     
@@ -106,7 +107,7 @@ export class CheckoutComponent implements OnInit {
     this.cartService.removeAllCart();
   }
  
-  resetsignUpForm(){
+  resetOrderDetailsForm(){
     this.orderDetailsForm.reset();
   }
  

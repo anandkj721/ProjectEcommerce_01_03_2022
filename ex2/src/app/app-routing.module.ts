@@ -12,6 +12,8 @@ import { adminlogin } from './components/adminLogin/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { AuthGuard } from './shared/auth.guard';
 import { UsersComponent } from './components/users/users.component';
+import { UserOrdersComponent } from './components/user-orders/user-orders.component';
+import { AdminOrderUsersComponent } from './components/admin-order-users/admin-order-users.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'productPage',pathMatch:'full'},
@@ -23,13 +25,16 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
   {path:'home',component:HomeComponent},
+  {path: 'userOrders', component: UserOrdersComponent},
+
   // {path:'users',component:UsersComponent},
    {path: 'adminLogin', component: adminlogin},
   // {path:'admin',component:AdminComponent}
 
   {path:'admin',component:AdminComponent,children:[
     {path:'users',component:UsersComponent},
-    {path:'addProduct',component:AddProductComponent}
+    {path:'addProduct',component:AddProductComponent},
+    {path:'adminOrders',component:AdminOrderUsersComponent}
  ]},
   
 ];

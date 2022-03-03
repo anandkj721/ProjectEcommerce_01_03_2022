@@ -202,21 +202,21 @@
                 <div class="form-group">
                     <label for="exampleInputPassword1">First Name</label>
                     <input type="text" formControlName="firstName" class="form-control" id="exampleInputPassword1" placeholder="Enter First Name">
-                    <span class="text-danger" *ngIf="signUpForm.controls['firstName'].dirty && signUpForm.hasError('required','firstName')">*First Name is required</span>
+                    <span class="text-danger" *ngIf="orderDetailsForm.controls['firstName'].dirty && orderDetailsForm.hasError('required','firstName')">*First Name is required</span>
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputPassword1">Last Name</label>
                     <input type="text" formControlName="lastName" class="form-control" id="exampleInputPassword1" placeholder="Enter lastName">
-                    <span class="text-danger" *ngIf="signUpForm.controls['lastName'].dirty && signUpForm.hasError('required','lastName')">*Last Name is required</span>
+                    <span class="text-danger" *ngIf="orderDetailsForm.controls['lastName'].dirty && orderDetailsForm.hasError('required','lastName')">*Last Name is required</span>
                 </div>
               
               <div class="form-group">
                 <label for="exampleInputPassword1">Address</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="customerAddress" rows="3" id="exampleInputPassword1" placeholder="Enter Address"></textarea>
-                <span class="text-danger" *ngIf="signUpForm.controls['customerAddress'].dirty && signUpForm.hasError('required','customerAddress')">*Address  is required</span>
+                <span class="text-danger" *ngIf="orderDetailsForm.controls['customerAddress'].dirty && orderDetailsForm.hasError('required','customerAddress')">*Address  is required</span>
                 <!-- <button type="submit" (click)="orderDetails()" class="btn btn-primary mt-3">Place Order</button> -->
-                <input  class="btn btn-primary"   type="submit" [disabled]="!signUpForm.valid" value="Submit"/>
+                <input  class="btn btn-primary"   type="submit" [disabled]="!orderDetailsForm.valid" value="Submit"/>
               </div>
             </form>
             <form class="needs-validation" novalidate="">

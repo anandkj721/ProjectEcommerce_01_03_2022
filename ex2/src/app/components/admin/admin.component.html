@@ -1,14 +1,14 @@
-<!-- <form [formGroup]="form" (ngSubmit)="logout()" > -->
+
   <form [formGroup]="form">
   <div class="container">
     <p>Welcome <b> {{selectedMessage}}</b></p> 
-    <!-- <button class="btn btn-link" id="btnLogout" (click)="logout()">Logout</button> -->
+
   
   </div>
 
   <ul class="sidenav">
     <a [routerLink]="['addProduct']">Products</a>
-    <a [routerLink]="['order']">Orders</a>
+    <!-- <a [routerLink]="['adminOrders']">Orders</a> -->
     <a [routerLink]="['users']">Users</a>      
     <a (click)="logout('endadmin')">Logout</a>
    

@@ -44,7 +44,8 @@
                   
                     <div>
                         <ng-container *ngIf="showUserName">
-                            <p style="color: white;" id="showUserName">   <b>{{selectedMessage}}</b> </p>
+                            <!-- <p style="color: white;" id="showUserName">   <b>{{selectedMessage}}</b> </p> -->
+                            <a  style="text-decoration: none; color: white;"  id="showUserName" [routerLink]="['/userOrders']"><b>{{selectedMessage}}</b></a>
                         </ng-container>
                     </div>
                 
@@ -55,7 +56,7 @@
                     </ng-container>
                   </div>
 
-                  <!-- *************************** -->
+                  
                   <div class="form-group" style="margin-left: 10px;">
                     <ng-container *ngIf="logoutNgContainer">
                         <button class="btn btn-primary  " id="btnLogout" (click)="adminLogout()">Admin</button>

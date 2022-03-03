@@ -10,7 +10,7 @@ namespace ecom.Models
     {
         dev_apidbProduct db = new dev_apidbProduct();
 
-        public IEnumerable<Orderdetail> GetAllProduct()
+        public IEnumerable<Orderdetail> GetAllOrderdetail()
         {
             try
             {
@@ -22,11 +22,14 @@ namespace ecom.Models
             }
         }
 
-        public Orderdetail GetOrderdetailData(int id)
+        public List<Orderdetail> GetOrderdetailData(string Username)
         {
             try
             {
-                Orderdetail orderdetail = db.Orderdetails.Find(id);
+                List<Orderdetail> orderdetail = new List<Orderdetail>();
+                orderdetail = db.Orderdetails.Where(t => t.Username.Contains(Username)).ToList();
+
+                //Orderdetail o = db.Orderdetails.Find(Username);
                 return orderdetail;
             }
             catch

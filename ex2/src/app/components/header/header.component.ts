@@ -75,7 +75,7 @@ export class HeaderComponent implements OnInit {
   }
 
   adminLogout(){
-    debugger;
+    
     //this.logoutNgContainer=false;
     if(this.selectedMessage.length ==0){
       this.logoutNgContainer=true;
